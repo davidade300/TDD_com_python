@@ -27,3 +27,29 @@ assert
 - Fixtures permitem criar um ambiente isolado para cada teste;
 - Permitem gerenciar recursos antes e depois do teste;
 - Permitem controlar o escopo;
+
+### Setup e teardown com Fixtures
+
+- Fixtures podem ser usadas para:
+  - Preparação (setup);
+  - Limpeza após testes (teardown);
+    - Garante a limpeza dos recursos;
+- Utiliza-se yield em fixtures para setup e teardown;
+
+### Yield
+
+- Usado em função para transforma-la em gerador;
+- Permite produzir uma série de valores
+
+```python
+
+def contador(máximo):
+    n = 0
+    while n < maximo:
+        yield n
+        n += 1
+
+# usando o gerador
+for i in contador(5):
+    print(i)
+```
