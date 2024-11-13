@@ -53,3 +53,20 @@ def contador(máximo):
 for i in contador(5):
     print(i)
 ```
+
+### Escopos de Fixtures
+
+- O escopo define a vida útil de uma fixture (escopo == vida útil)
+  - Sua inicialização e destruição(teardown)
+
+- Existem cinco opções de escopo para uma fixture:
+  - Function :
+    - Padrão, criada e destruida para a função de teste que a utilizar
+  - Class:
+    - Cria e destroi uma vez para cada instância da Classe.
+  - Module:
+    - Cria e destroi uma vez para cada módulo ou arquivo de teste
+  - Package:
+    - Cria e destroi uma vez para cada Package.
+  - Session:
+    - Toda a seção de testes compartilha a mesma fixture.
