@@ -70,3 +70,17 @@ for i in contador(5):
     - Cria e destroi uma vez para cada Package.
   - Session:
     - Toda a seção de testes compartilha a mesma fixture.
+
+## Testes Parametrizados
+
+### Introdução à Parametrização de testes
+
+- Executar testes com diferentes dados;
+- Aumenta a cobertura do teste;
+- Benefícios da parametrização:
+  - Não precisa criar múltiplos casos de teste;
+- decorador:
+
+```python
+    @pytest.mark.parametrize
+```
