@@ -84,3 +84,52 @@ for i in contador(5):
 ```python
     @pytest.mark.parametrize
 ```
+
+## Marcadores
+
+- Permitem organizar testes através de categorias;
+- Atribuiímos "etiquetas" aos testes;
+- Execução seletiva;
+
+- Teste apenas certas funcionalidades:
+  - conexões;
+  - Carga de Dados;
+  - Transformação;
+
+- Tipos de teste:
+  - Testes unitários;
+  - Testes de integração;
+  - Testes de interface de usuário (UI);
+  - Testes de acesso a banco de dados;
+  - Testes de API;
+
+- Decorator:
+
+```python
+  @pytest.mark.nome_do_marcador
+```
+
+- Como executar só testes com marcadores:
+
+```bash
+  pytest -m nome_do_marcador
+```
+
+- Como executar todos os testes menos os com determinado marcador:
+
+```bash
+  pytest -m "no nome_do_marcador"
+```
+
+- Caso use poetry como gerenciador de pacotes, basta adicionar o seguinte antes do comando pytest:
+
+```shell
+poetry run 
+```
+
+### Exemplos
+
+- Sistema de gestão:
+  - Emissão da Nota Fiscal;
+  - Módulo Contábil;
+  - Importação de arquivos
