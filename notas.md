@@ -121,10 +121,20 @@ for i in contador(5):
   pytest -m "no nome_do_marcador"
 ```
 
+- o marcador -m, para marcadores, aceita operadores lógicos. Exemplo:
+
+```bash
+  pytest -m "nome_do_marcador_1 and nome_do_marcador_2"
+  # executa testes que tenham dois marcadores (o marcador 1 e o marcador 2)
+
+  pytest -m "nome_do_marcador_1 and not nome_do_marcador_2"
+  # executa testes que tenh 
+```
+
 - Caso use poetry como gerenciador de pacotes, basta adicionar o seguinte antes do comando pytest:
 
 ```shell
-poetry run 
+  poetry run 
 ```
 
 ### Exemplos
