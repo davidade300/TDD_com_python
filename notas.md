@@ -54,6 +54,8 @@ for i in contador(5):
     print(i)
 ```
 
+- Aparantemente utiliza-se yield mantém o estado daquilo que é yielded, por exemplo um arquivo que foi aberto e teve linhas escritas, caso queira em um momento posterior continuar a escrever nesse arquivo, no ponto em que o ponteiro parou, pode ser utilizado o yield (eu acho).
+
 ### Escopos de Fixtures
 
 - O escopo define a vida útil de uma fixture (escopo == vida útil)
@@ -82,7 +84,7 @@ for i in contador(5):
 - decorador:
 
 ```python
-    @pytest.mark.parametrize
+    @pytest.mark.parametrize("a,b,resultado_esperado",[(a,b,resultado_esperado)])
 ```
 
 ## Marcadores
@@ -143,3 +145,15 @@ for i in contador(5):
   - Emissão da Nota Fiscal;
   - Módulo Contábil;
   - Importação de arquivos
+
+## Testes de exceções
+
+```python
+with pytest.raises(exception):
+  ...
+```
+
+- Garante que o código responde a situações inesperadas;
+- Usado em pontos do código que pode gerar exceções;
+
+- Testa se o código gerado dentro da expressão with gera a exceção esperada e, caso gere, o teste passa.
