@@ -157,3 +157,26 @@ with pytest.raises(exception):
 - Usado em pontos do código que pode gerar exceções;
 
 - Testa se o código gerado dentro da expressão with gera a exceção esperada e, caso gere, o teste passa.
+
+## Plugins
+
+- Adicionam funcionalidades extras ao pytest;
+- Devem ser instalados pelo pip/ gerenciador de pacotes;
+
+- Plugins populares:
+  - Pytest-cov:
+    - Para cobertura de código;
+  - Pytest-asyncio:
+    - Para testes assíncronos;
+  - Pytest-html:
+    - para gerar relatórios HTML;
+
+- Comando:
+
+```bash
+# para testar tudo
+  pytest --cov
+
+# para testar a cobertura de um arquivo específico
+pytest --cov=arquivo_com_funcoes_a_ser_testadas arquivo_com_testes.py 
+```
