@@ -230,3 +230,10 @@ with pytest.raises(exception):
   - Detecção precoce de erros;
   - Melhora na qualidade do software;
   - Agilidade no ciclo de lançamento.
+
+### Pyteste no CI/CD
+
+- Cada alteração do código verifica a qualidade automaticamente
+- Ferramentas:
+  - GitHub Actions;
+  - Jenkins.
