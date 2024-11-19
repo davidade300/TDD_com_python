@@ -178,5 +178,55 @@ with pytest.raises(exception):
   pytest --cov
 
 # para testar a cobertura de um arquivo específico
-pytest --cov=arquivo_com_funcoes_a_ser_testadas arquivo_com_testes.py 
+  pytest --cov=arquivo_com_funcoes_a_ser_testadas arquivo_com_testes.py 
 ```
+
+## Boas práticas em Testes
+
+- O nome deve dizer claramente o que o teste faz
+
+- Convenções de nomeação;
+  - Test + componente + condição:
+    - Ex.
+
+    ```python
+    def test_sum_positive_numbers_return_correct_result():
+      ...
+    ```
+
+### Documentando Testes
+
+- Uso de docstrings:
+
+```python
+  def test_sum_with_empty_list_returns_zero():
+    """
+    Testa se a função sum retorna 0 para uma lista
+    vazia.
+    """
+      assert sum([]) == 0
+```
+
+### Testes em código legado
+
+- Código legado normalmente não possui testes;
+- Refatorar, caso exista e iniciar onde o risco de problema é maior são boas práticas.
+
+## Testes de integração e End-to-End
+
+- Testes de Unidade:
+  - Testam funções isoladamente;
+- Testes de Integração:
+  - verificam como diferentes unidades de software trabalham juntas;
+- Testes End-to-End:
+  - Validam o fluxo do aplicativo do início ao fim, imitando o comportamento do usuário. Não necessáriamente a relação entre as funções.
+
+## Introdução ao CI/CD
+
+- Integração Contínua ( Continuos Integration) e Entrega/Implantação Contínua (Continuous Delivery/Deployment)
+- Integração do Software com Frequência
+- Cada Integração é Testada automaticamente
+- benefícios:
+  - Detecção precoce de erros;
+  - Melhora na qualidade do software;
+  - Agilidade no ciclo de lançamento.
