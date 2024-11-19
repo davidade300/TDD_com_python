@@ -1,7 +1,7 @@
 # testes de integração testam a integração entre diferentes componentes
 # do sistema (oh rlly?).
 
-from app import Produto, Estoque
+from .app import Produto, Estoque
 
 
 def test_adicionar_verificar_quantidade():

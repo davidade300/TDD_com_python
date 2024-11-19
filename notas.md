@@ -237,3 +237,35 @@ with pytest.raises(exception):
 - Ferramentas:
   - GitHub Actions;
   - Jenkins.
+
+## Opcoes da CLI
+
+![alt text](images/pytest_comands.png)
+
+## Testes Assíncronos
+
+- Para validar código que roda de forma assíncrona:
+  - Requisições de APIs;
+  - Funções com uso de asyncio;
+- Teste assincrono garante o teste correto;
+- Um teste síncrono pode gerar erro ou resultado inesperado.
+
+### Corrotina
+
+- Função que trabalha de fomr assíncrona;
+- __async def__ na definição da função
+
+```python
+  async def funcao(*args, **kwargs):
+    processamento
+    await processamento
+```
+
+- __await__ no corpo da função para aguardar conclusão
+
+- necessário o pacote asinc do pytest:
+
+```bash
+  poetry add pytest-asyncio
+  # pip install pytest-asyncio -> para usuarios de pip
+```
